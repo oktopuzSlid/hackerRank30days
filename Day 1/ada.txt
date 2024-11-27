@@ -1,0 +1,19 @@
+with Ada.Text_IO, Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+with Ada.Strings.Unbounded.Text_IO;
+
+
+procedure Solution is
+-- Enter your code here. Read input from STDIN. Print output to STDOUT
+-- declaramos la variable de tipo unbounded string
+    hola:unbounded_string;
+-- empezamos el procedimiento con begin
+    begin
+-- usamos la libreria text io para almacenar la siguiente linea en nuestra variable
+    hola:=Ada.Strings.Unbounded.Text_IO.get_line;
+-- insertamos la palabra que queremos
+    Ada.Text_IO.put_line (item=>"Hello, World.");
+-- imprimimos nuestra variable
+    Ada.Strings.Unbounded.Text_IO.put_line(hola);
+
+end Solution;
