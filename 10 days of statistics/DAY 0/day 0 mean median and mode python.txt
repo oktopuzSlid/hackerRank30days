@@ -1,0 +1,27 @@
+#as for the example of this task the 
+from statistics import median,mode
+from collections import Counter
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+x= [n]
+lista=input().split()
+temp=0
+i=0
+for aux in lista:
+    lista[temp]=int(aux)
+    i=i+lista[temp]
+    temp+=1
+print(i/n)
+
+def multimode(data):
+    
+    counts = Counter(iter(data))
+    if not counts:
+        return []
+    maxcount = max(counts.values())
+    return [value for value, count in counts.items() if count == maxcount]
+
+print (median(lista))
+
+print(min(multimode(lista)))
